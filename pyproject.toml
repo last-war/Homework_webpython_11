@@ -8,6 +8,11 @@ packages = [{include = "homework_webpython_11"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+fastapi = "^0.95.0"
+uvicorn = {extras = ["standard"], version = "^0.21.1"}
+python-dotenv = "^1.0.0"
+psycopg2-binary = "^2.9.5"
+sqlalchemy = "^2.0.7"
 
 
 [build-system]
