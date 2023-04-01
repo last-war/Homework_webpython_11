@@ -6,7 +6,7 @@ from sqlalchemy import pool
 from alembic import context
 
 from src.database.models import Base
-from src.database.connector import SQLALCHEMY_DATABASE_URL
+#from src.database.connector import SQLALCHEMY_DATABASE_URL
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -23,7 +23,7 @@ if config.config_file_name is not None:
 # target_metadata = mymodel.Base.metadata
 target_metadata = Base.metadata
 
-config.set_main_option("sqlalchemy.url", SQLALCHEMY_DATABASE_URL)
+config.set_main_option("sqlalchemy.url", 'postgresql://postgres:secret@127.0.0.1:5432/rest_app')
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
